@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+
 const Currency = () => {
-  const { Currency } = useContext(AppContext);
+  const {dispatch } = useContext(AppContext);
     const changeCurrency = (val)=>{
-            Currency({
+            dispatch({
                 type: 'CHG_CURRENCY',
                 payload: val,
             })
