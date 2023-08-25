@@ -3,10 +3,10 @@ import { TiDelete } from 'react-icons/ti';
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { AppContext } from '../context/AppContext';
-import Currency from './Currency';
+
 
 const ExpenseItem = (props) => {
-    const { dispatch } = useContext(AppContext);
+    const { dispatch, Currency} = useContext(AppContext);
 
     const handleDeleteExpense = () => {
         dispatch({
